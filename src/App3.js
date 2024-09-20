@@ -5,7 +5,7 @@ import photo from "./assets/rejane.jpeg";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { QRCodeSVG } from "qrcode.react";
 
-function App2() {
+function App3() {
     const myVCard = new VCard();
     const lastName = "Mader";
     const firstName = "Rejane";
@@ -100,4 +100,4 @@ function App2() {
     );
 }
 
-export default App2;
+export default App3;
