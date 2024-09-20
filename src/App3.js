@@ -1,24 +1,24 @@
 import React from "react";
 import "./App.css";
 import VCard from "vcard-creator";
-import photo from "./assets/katrina.png";
+import photo from "./assets/rejane.jpeg";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { QRCodeSVG } from "qrcode.react";
 
 function App2() {
     const myVCard = new VCard();
     const lastName = "Mader";
-    const firstName = "Katrina";
+    const firstName = "Rejane";
     const additional = "";
     const prefix = "";
     const suffix = "";
     const company = "Qro + Saúde";
-    const jobtitle = "CMO";
-    const role = "CMO";
-    const email = "katrinabmader@gmail.com";
-    const linkedin = "https://www.linkedin.com/in/katrina-mader-7a713525b";
-    const personalPhoneNumber = "+5521971706400";
-    const workPhoneNumber = "+5521971706400";
+    const jobtitle = "CEO";
+    const role = "CEO";
+    const email = "r_carvalhofreitas@yahoo.com.br";
+    const linkedin = "https://www.linkedin.com/in/rejane-freitas-91018354";
+    const personalPhoneNumber = "+5521999706400";
+    const workPhoneNumber = "+5521999706400";
     const homePage = "";
     const instagram = "https://www.instagram.com/qromaissaude";
 
@@ -63,7 +63,7 @@ function App2() {
         <Router>
             <Routes>
                 <Route
-                    path="/a0e8d2fd993f1f0600d5105ba7db2dc6"
+                    path="/a0e8d2fd993f1f0600d5105ba7db2dc7"
                     element={
                         <div className="App">
                             <h1>{`${firstName} ${lastName}`}</h1>
@@ -83,7 +83,7 @@ function App2() {
                                 </a>
                                 <button onClick={handleDownloadContact}>Add Contact</button>
                                 <QRCodeSVG
-                                    value="https://keepnex-563756cfc1d7.herokuapp.com/a0e8d2fd993f1f0600d5105ba7db2dc6"
+                                    value="https://keepnex-563756cfc1d7.herokuapp.com/a0e8d2fd993f1f0600d5105ba7db2dc7"
                                     size={256}
                                     bgColor="#ffffff"
                                     fgColor="#000000"
