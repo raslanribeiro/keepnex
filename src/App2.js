@@ -1,11 +1,27 @@
 import React from "react";
 import "./App.css";
 import VCard from "vcard-creator";
-import photo from "./assets/talita.jpeg";
+import photo from "./assets/katrina.png";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { QRCodeSVG } from "qrcode.react";
 
-function App() {
+function App2() {
+    const myVCard = new VCard();
+    const lastName = "Mader";
+    const firstName = "Katrina";
+    const additional = "";
+    const prefix = "";
+    const suffix = "";
+    const company = "Qro + Saúde";
+    const jobtitle = "CEO";
+    const role = "CEO";
+    const email = "katrinabmader@gmail.com";
+    const linkedin = "https://www.linkedin.com/in/katrina-mader-7a713525b";
+    const personalPhoneNumber = "+5521971706400";
+    const workPhoneNumber = "+5521971706400";
+    const homePage = "";
+    const instagram = "https://www.instagram.com/qromaissaude";
+
     const handleDownloadContact = () => {
         const toBase64 = (imagePath) => {
             return fetch(imagePath)
@@ -20,32 +36,15 @@ function App() {
         };
 
         toBase64(photo).then((base64Photo) => {
-            const myVCard = new VCard();
-            const lastname = "Floriano";
-            const firstname = "Tálita";
-            const additional = "";
-            const prefix = "";
-            const suffix = "";
-            const company = "CDS";
-            const jobtitle = "Professora";
-            const role = "Professora";
-            const email = "talitafloriano@gmail.com";
-            const linkedin = "https://www.linkedin.com/in/talitafloriano";
-            const personalPhoneNumber = "+5521969133563";
-            const workPhoneNumber = "+5521969133563";
-            const homePage = "";
-            // const photoPath = "/public/photos/talita.jpeg";
-            // const photo = fs.readFileSync(photoPath, { encoding: "base64", flag: "r" });
-
             myVCard
-                .addName(lastname, firstname, additional, prefix, suffix)
+                .addName(lastName, firstName, additional, prefix, suffix)
                 .addCompany(company)
                 .addJobtitle(jobtitle)
                 .addRole(role)
                 .addEmail(email)
                 .addPhoneNumber(personalPhoneNumber, "PREF")
                 .addPhoneNumber(workPhoneNumber, "WORK")
-                .addAddress(null, null, "street", "worktown", null, "workpostcode", "Belgium")
+                .addAddress(null, null, "street", "worktown", null, "workpostcode", "Brazil")
                 .addSocial(linkedin, "Linkedin")
                 .addURL(homePage)
                 .addPhoto(base64Photo, "JPEG");
@@ -64,22 +63,22 @@ function App() {
         <Router>
             <Routes>
                 <Route
-                    path="/a0e8d2fd993f1f0600d5105ba7db2dc5"
+                    path="/a0e8d2fd993f1f0600d5105ba7db2dc6"
                     element={
                         <div className="App">
-                            <h1>Tálita Floriano</h1>
+                            <h1>{`${firstName} ${lastName}`}</h1>
                             {photo && <img src={photo} className="photoPreview" alt="Profile" width={100} height={100} unoptimized />}
                             <div className="button-container">
-                                <a href="https://wa.me/5521969133563" target="_blank" rel="noopener noreferrer">
+                                <a href={`https://wa.me/${workPhoneNumber}`} target="_blank" rel="noopener noreferrer">
                                     <button>WhatsApp</button>
                                 </a>
-                                <a href="https://www.linkedin.com/in/talitafloriano" target="_blank" rel="noopener noreferrer">
+                                <a href={linkedin} target="_blank" rel="noopener noreferrer">
                                     <button>LinkedIn</button>
                                 </a>
-                                <a href="https://www.instagram.com/talitafloriano" target="_blank" rel="noopener noreferrer">
+                                <a href={instagram} target="_blank" rel="noopener noreferrer">
                                     <button>Instagram</button>
                                 </a>
-                                <a href="mailto:talitafloriano@gmail.com" target="_blank" rel="noopener noreferrer">
+                                <a href={`mailto:${email}`} target="_blank" rel="noopener noreferrer">
                                     <button>Gmail</button>
                                 </a>
                                 <button onClick={handleDownloadContact}>Add Contact</button>
@@ -101,4 +100,4 @@ function App() {
     );
 }
 
-export default App;
+export default App2;
