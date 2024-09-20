@@ -7,7 +7,7 @@ import { QRCodeSVG } from "qrcode.react";
 
 function App3() {
     const myVCard = new VCard();
-    const lastName = "Mader";
+    const lastName = "Freitas";
     const firstName = "Rejane";
     const additional = "";
     const prefix = "";
@@ -17,8 +17,8 @@ function App3() {
     const role = "CEO";
     const email = "r_carvalhofreitas@yahoo.com.br";
     const linkedin = "https://www.linkedin.com/in/rejane-freitas-91018354";
-    const personalPhoneNumber = "+5521999706400";
-    const workPhoneNumber = "+5521999706400";
+    const personalPhoneNumber = "+5531999990377";
+    const workPhoneNumber = "+5531999990377";
     const homePage = "";
     const instagram = "https://www.instagram.com/qromaissaude";
 
